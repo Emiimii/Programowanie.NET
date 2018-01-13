@@ -1,0 +1,9 @@
+c:\users\sii\documents\visual studio 2017\Projects\Kalkulator\Kalkulator\bin\Debug\Kalkulator.exe.config
+c:\users\sii\documents\visual studio 2017\Projects\Kalkulator\Kalkulator\bin\Debug\Kalkulator.exe
+c:\users\sii\documents\visual studio 2017\Projects\Kalkulator\Kalkulator\bin\Debug\Kalkulator.pdb
+c:\users\sii\documents\visual studio 2017\Projects\Kalkulator\Kalkulator\obj\Debug\Kalkulator.csprojResolveAssemblyReference.cache
+c:\users\sii\documents\visual studio 2017\Projects\Kalkulator\Kalkulator\obj\Debug\Kalkulator.Form1.resources
+c:\users\sii\documents\visual studio 2017\Projects\Kalkulator\Kalkulator\obj\Debug\Kalkulator.Properties.Resources.resources
+c:\users\sii\documents\visual studio 2017\Projects\Kalkulator\Kalkulator\obj\Debug\Kalkulator.csproj.GenerateResource.Cache
+c:\users\sii\documents\visual studio 2017\Projects\Kalkulator\Kalkulator\obj\Debug\Kalkulator.exe
+c:\users\sii\documents\visual studio 2017\Projects\Kalkulator\Kalkulator\obj\Debug\Kalkulator.pdb
