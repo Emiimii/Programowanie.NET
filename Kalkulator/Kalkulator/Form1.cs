@@ -15,6 +15,8 @@ namespace Kalkulator
         Double value = 0;
         String operation = "";
         bool operation_pressed = false;
+        private bool equationComplete = false;
+        private bool zeroInTex = false;
         public Form1()
         {
             InitializeComponent();
@@ -22,6 +24,14 @@ namespace Kalkulator
 
         private void button_Click(object sender, EventArgs e)
         {
+            if (equationComplete) wynik.Text = "";
+
+            if (zeroInTex)
+            {
+                wynik.Font = new Font("Arial", 24);
+                zeroInTex = false;
+            }
+
             if ((wynik.Text == "0")||(operation_pressed))
                 wynik.Clear(); //komenda usuwa 0 z textBox'a przed cyfrą
 
@@ -34,8 +44,9 @@ namespace Kalkulator
             }
             else
                 wynik.Text = wynik.Text + b.Text;
-
+            
             label2.Focus();
+            equationComplete = false;
             //bez work around:
             //rowne.Focus();
         }
@@ -95,14 +106,29 @@ namespace Kalkulator
                 wynik.Text = (value * Double.Parse(wynik.Text)).ToString();
                 break;
                  case "/":
-                wynik.Text = (value / Double.Parse(wynik.Text)).ToString();
-                break;
+                    if (wynik.Text != "0")
+                    {
+                        wynik.Text = (value / Double.Parse(wynik.Text)).ToString();
+                    }
+                    break;
                 default:
                     break;
-            } 
-            
-            value = Double.Parse(wynik.Text);
+            }
+
+            if (wynik.Text == "0")
+            {
+                wynik.Text = "Nie mozna dzielic przez 0";
+                wynik.Font = new Font("Arial", 10);
+                zeroInTex = true;
+            }
+            else
+            {
+                value = Double.Parse(wynik.Text);
+                zeroInTex = false;
+            }
+               
             operation = "";
+            equationComplete = true;
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e) //czytanie liczb z klawiatury
