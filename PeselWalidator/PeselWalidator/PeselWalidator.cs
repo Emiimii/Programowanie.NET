@@ -49,7 +49,7 @@ namespace PeselWal
                 suma += int.Parse(tmpWaga.ToString().Last().ToString());
             }
 
-            return 10 - int.Parse(suma.ToString().Last().ToString());
+            return int.Parse((10 - int.Parse(suma.ToString().Last().ToString())).ToString().Last().ToString());
         }
 
         public string Plec

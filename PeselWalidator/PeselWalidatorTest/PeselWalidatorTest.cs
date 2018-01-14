@@ -97,6 +97,13 @@ namespace PeselWalidatorTest
         }
 
         [TestMethod]
+        public void TestCzyWalidatorPoprawnieLiczySumeKontrolna_Dla0()
+        {
+            walidator.WczytajPesel("82070803620");
+            Assert.AreEqual(0, walidator.SumaKontrolna());
+        }
+
+        [TestMethod]
         public void TestCzyWalidatorPoprawnieLiczySumeKontrolna_Dla5()
         {
             walidator.WczytajPesel("32070803625");
