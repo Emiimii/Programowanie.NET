@@ -75,9 +75,5 @@ namespace PeselWal
             return false;
         }
 
-        public bool SprawdzIloscZnakow()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
